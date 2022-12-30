@@ -6,6 +6,9 @@ import jakarta.persistence.Id;
 @Entity
 public class BookEntity {
 
+    String bookLocation;
+
+    boolean isCheckOut = false;
     String bookTitle;
     String bookAuthor;
     String bookSummary;
@@ -17,13 +20,32 @@ public class BookEntity {
 
     }
 
+    public String getBookLocation() {
+        return bookLocation;
+    }
+
+    public void setBookLocation(String bookLocation) {
+        this.bookLocation = bookLocation;
+    }
+
+    public boolean isCheckOut() {
+        return isCheckOut;
+    }
+
+    public void setCheckOut(boolean checkOut) {
+        isCheckOut = checkOut;
+    }
+
     @Override
     public String toString() {
         return "BookEntity{" +
-                "bookTitle='" + bookTitle + '\'' +
+                "bookLocation='" + bookLocation + '\'' +
+                ", isCheckOut=" + isCheckOut +
+                ", bookTitle='" + bookTitle + '\'' +
                 ", bookAuthor='" + bookAuthor + '\'' +
                 ", bookSummary='" + bookSummary + '\'' +
                 ", bookCoverLink='" + bookCoverLink + '\'' +
+                ", id=" + id +
                 '}';
     }
 

@@ -2,7 +2,7 @@ let bookTitle = document.getElementById("book-title")
 let bookAuthor = document.getElementById("book-author")
 let bookCoverLink = document.getElementById("book-cover-link")
 let bookSummary = document.getElementById("book-summary")
-
+let bookLocation = document.getElementById("book-location")
 let id = 0;
 
 
@@ -11,6 +11,7 @@ function helloWorld(){
     const data = {
         bookTitle:bookTitle.value,
         id:id,
+        bookLocation:bookLocation.value,
         bookAuthor:bookAuthor.value,
         bookCoverLink:bookCoverLink.value,
         bookSummary:bookSummary.value
