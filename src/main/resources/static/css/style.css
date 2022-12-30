@@ -37,6 +37,17 @@ h1,h2,h3,h4,h5{
     height:3rem;
     background: #4ea699;
 }
+#share-book{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+    color: whitesmoke;
+    font-weight: 900;
+    width: 50%;
+    height:3rem;
+    background: #714ea6;
+}
 
 #delete-book{
     margin-left: auto;
@@ -63,8 +74,8 @@ body{
     display: flex;
     margin: 0;
     border-radius: 2rem;
-    width: 98vw;
-    height: 97vh;
+    width: 100vw;
+    height: 100vh;
     background: #4d524a;
 }
 
@@ -92,7 +103,8 @@ body{
 
 
 
-#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover, #delete-book:hover,#edit-book:hover{
+
+#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover, #delete-book:hover,#edit-book:hover, #share-book:hover{
     cursor: pointer;
     background: #212121;
     color: forestgreen;
@@ -138,7 +150,7 @@ header{
 
 .book-summary{
     overflow: scroll;
-    height: 30%;
+    height: 35%;
     margin: 1rem;
     color: #4d524a;
     font-size: 1rem;
@@ -146,6 +158,15 @@ header{
     display: flex;
     width: 90%;
     overflow-x: hidden;
+}
+
+.book-details-btns{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 100%;
+    align-items: center;
 }
 
 .top-section{
