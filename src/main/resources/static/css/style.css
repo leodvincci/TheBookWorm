@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap');
+
+
 h1,h2,h3,h4,h5{
     margin: 0;
 }
@@ -5,7 +8,8 @@ h1,h2,h3,h4,h5{
 #add-new-book{
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
+    font-size: 1.25rem;
+    border-radius: 10px;
     border: none;
     color: whitesmoke;
     font-weight: 900;
@@ -67,7 +71,15 @@ html{
     align-items: center;
     height: 100vh;
     background: #212121;
-    font-family: Carlito;
+}
+input{
+    font-family: 'Montserrat';
+
+}
+
+textarea{
+    font-family: 'Montserrat';
+
 }
 
 body{
@@ -77,6 +89,7 @@ body{
     width: 100vw;
     height: 100vh;
     background: #4d524a;
+    font-family: 'Montserrat';
 }
 
 .section-1{
@@ -218,6 +231,7 @@ header{
 }
 
 .add-book-section{
+    margin-top: 7em;
     width: 90%;
 }
 
