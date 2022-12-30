@@ -99,12 +99,15 @@ header{
 }
 
 .book-summary{
+    overflow: scroll;
+    height: 30%;
     margin: 1rem;
     color: #4d524a;
     font-size: 1rem;
     line-height: 1.5;
     display: flex;
-    width: 85%;
+    width: 90%;
+    overflow-x: hidden;
 }
 
 .top-section{
