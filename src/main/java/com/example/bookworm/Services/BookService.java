@@ -21,4 +21,9 @@ public class BookService {
         return bookRepo.findAll();
     }
 
+    public void deleteBook(Long bookID){
+        bookRepo.deleteById(bookID);
+        System.out.println("Book has been removed.");
+    }
+
 }
