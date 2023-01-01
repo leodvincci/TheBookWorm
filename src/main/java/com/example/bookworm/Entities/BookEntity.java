@@ -1,7 +1,6 @@
 package com.example.bookworm.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class BookEntity {
@@ -14,6 +13,8 @@ public class BookEntity {
     String bookSummary;
     String bookCoverLink;
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_one_generator")
+    @SequenceGenerator(name = "sequence_one_generator", sequenceName = "sequence_one_id",allocationSize = 10)
     private Long id;
 
     public BookEntity() {

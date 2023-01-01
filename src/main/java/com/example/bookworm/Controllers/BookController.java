@@ -15,8 +15,16 @@ public class BookController {
     BookService bookService;
     @PostMapping("/addNewBook")
     public void addBook(@RequestBody BookEntity bookEntity){
-        System.out.println(bookEntity);
-        bookService.saveNewBook(bookEntity);
+        BookEntity book = new BookEntity();
+        book.setBookAuthor( bookEntity.getBookAuthor());
+        book.setBookTitle(bookEntity.getBookTitle());
+        book.setBookLocation(bookEntity.getBookLocation());
+        book.setBookCoverLink(bookEntity.getBookCoverLink());
+        book.setBookSummary(bookEntity.getBookSummary());
+        book.setCheckOut(false);
+        bookService.saveNewBook(book);
+        System.out.println(book);
+
     }
 
     @GetMapping("/getAllBooks")

@@ -3,7 +3,7 @@ let bookAuthor = document.getElementById("book-author")
 let bookCoverLink = document.getElementById("book-cover-link")
 let bookSummary = document.getElementById("book-summary")
 let bookLocation = document.getElementById("book-location")
-let id = 0;
+// let id = 0;
 let myForm = document.getElementById("my-form")
 
 
@@ -13,7 +13,7 @@ function helloWorld(){
     });
     const data = {
         bookTitle:bookTitle.value,
-        id:id,
+        // id:id,
         bookLocation:bookLocation.value,
         bookAuthor:bookAuthor.value,
         bookCoverLink:bookCoverLink.value,
@@ -35,5 +35,5 @@ function helloWorld(){
             console.error('Error:', error);
         });
 
-    id +=1;
+    // id +=1;
 }
