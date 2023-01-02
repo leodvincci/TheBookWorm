@@ -125,6 +125,7 @@ body{
 }
 
 .section-2{
+    overflow: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,15 +245,19 @@ header{
 
 
 .book-item{
-    background: #ffcf76;
+    background: #ececec;
     border-radius: 20px;
     display: flex;
     width: 25%;
-    height: 50%;
+    height: 40%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 1em;
+}
+
+.book-item h6{
+    margin: 0;
 }
 
 .book-item:hover{
@@ -280,4 +285,5 @@ header{
 
 .book-item-cover{
     width: 45%;
+    padding: 1em;
 }

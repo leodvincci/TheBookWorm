@@ -5,6 +5,39 @@ let bookSummary = document.getElementById("book-summary")
 let bookLocation = document.getElementById("book-location")
 // let id = 0;
 let myForm = document.getElementById("my-form")
+let bookShelf = document.getElementById("my-book-shelf")
+
+let url = "http://localhost:8080/api/v1/book/getAllBooks"
+console.log("Hello")
+fetch(url)
+    .then((res)=>{
+        return res.json();
+    })
+    .then((data)=>{
+        data.forEach(x=>{
+           let cardTitle = document.createElement("h4");
+           let cardAuthor = document.createElement("h5");
+           let cardLocation = document.createElement("h6");
+           let cardImg = document.createElement("img");
+           let newDiv = document.createElement("div");
+
+           cardImg.src=x.bookCoverLink;
+           cardTitle.innerText = x.bookTitle
+           cardAuthor.innerText = x.bookAuthor;
+           cardLocation.innerText = x.bookLocation;
+           newDiv.classList.add("book-item");
+           cardImg.classList.add("book-item-cover")
+
+           newDiv.appendChild(cardImg);
+           newDiv.appendChild(cardTitle);
+           newDiv.appendChild(cardAuthor);
+           newDiv.appendChild(cardLocation);
+
+           bookShelf.appendChild(newDiv)
+
+
+        })
+    })
 
 
 function helloWorld(){
