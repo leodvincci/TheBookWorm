@@ -177,7 +177,7 @@ header{
 
 }
 
-.book-summary{
+.book-summary #my-book-summary  {
     overflow: scroll;
     height: 35%;
     margin: 1rem;

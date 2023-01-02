@@ -1,11 +1,13 @@
 let bookTitle = document.getElementById("book-title")
 let bookAuthor = document.getElementById("book-author")
-let bookCoverLink = document.getElementById("book-cover-link")
+let bookCoverLink = document.getElementById("book-img")
 let bookSummary = document.getElementById("book-summary")
 let bookLocation = document.getElementById("book-location")
 // let id = 0;
 let myForm = document.getElementById("my-form")
 let bookShelf = document.getElementById("my-book-shelf")
+let myBookSummary = document.getElementById("my-book-summary")
+
 
 let url = "http://localhost:8080/api/v1/book/getAllBooks"
 console.log("Hello")
@@ -33,11 +35,20 @@ fetch(url)
            newDiv.appendChild(cardAuthor);
            newDiv.appendChild(cardLocation);
 
+           newDiv.addEventListener("click", ()=>{
+               bookTitle.innerText = x.bookTitle;
+               bookAuthor.innerText = x.bookAuthor;
+               bookCoverLink.src = x.bookCoverLink;
+               myBookSummary.innerText = x.bookSummary
+           })
+
            bookShelf.appendChild(newDiv)
 
 
         })
     })
+
+
 
 
 function helloWorld(){
