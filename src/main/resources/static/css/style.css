@@ -95,6 +95,7 @@ body{
 .section-1{
     /*background: #eaeaea;*/
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #ffcf76;
@@ -239,4 +240,44 @@ header{
 #book-img{
     width: 70%;
     box-shadow: 1.5rem 1.5rem 5rem rgba(0, 0, 0, 0.49);
+}
+
+
+.book-item{
+    background: #ffcf76;
+    border-radius: 20px;
+    display: flex;
+    width: 25%;
+    height: 50%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+.book-item:hover{
+    cursor: pointer;
+    background: #ffb220;
+}
+
+.book-item:active{
+    background: #f3d59b;
+}
+
+.book-shelf{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 85%;
+}
+
+.book-item p{
+
+    margin: 1rem 0 0 0;
+}
+
+.book-item-cover{
+    width: 45%;
 }
