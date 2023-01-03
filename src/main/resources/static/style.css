@@ -5,6 +5,24 @@ h1,h2,h3,h4,h5{
     margin: 0;
 }
 
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #212121;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    border-radius: 2rem;
+    width: 100vw;
+    height: 100vh;
+    background: #4d524a;
+    font-family: 'Montserrat';
+}
+
 #add-new-book{
     margin-left: auto;
     margin-right: auto;
@@ -30,17 +48,6 @@ h1,h2,h3,h4,h5{
     background: #4242d3;
 }
 
-#edit-book{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    border: none;
-    color: whitesmoke;
-    font-weight: 900;
-    width: 50%;
-    height:3rem;
-    background: #4ea699;
-}
 #share-book{
     margin-left: auto;
     margin-right: auto;
@@ -52,8 +59,7 @@ h1,h2,h3,h4,h5{
     height:3rem;
     background: #714ea6;
 }
-
-#delete-book{
+.delete-book{
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -64,14 +70,18 @@ h1,h2,h3,h4,h5{
     height:3rem;
     background: #af1717;
 }
-
-html{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #212121;
+#edit-book{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+    color: whitesmoke;
+    font-weight: 900;
+    width: 50%;
+    height:3rem;
+    background: #4ea699;
 }
+
 input{
     font-family: 'Montserrat';
 
@@ -80,16 +90,6 @@ input{
 textarea{
     font-family: 'Montserrat';
 
-}
-
-body{
-    display: flex;
-    margin: 0;
-    border-radius: 2rem;
-    width: 100vw;
-    height: 100vh;
-    background: #4d524a;
-    font-family: 'Montserrat';
 }
 
 .section-1{
@@ -118,7 +118,7 @@ body{
 
 
 
-#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover, #delete-book:hover,#edit-book:hover, #share-book:hover{
+#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover, .delete-book:hover,#edit-book:hover, #share-book:hover{
     cursor: pointer;
     background: #212121;
     color: forestgreen;
@@ -180,6 +180,7 @@ header{
 .book-summary #my-book-summary  {
     overflow: scroll;
     height: 35%;
+    padding: 2em;
     margin: 1rem;
     color: #4d524a;
     font-size: 1rem;

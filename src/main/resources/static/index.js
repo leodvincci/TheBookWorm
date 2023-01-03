@@ -7,10 +7,10 @@ let bookLocation = document.getElementById("book-location")
 let myForm = document.getElementById("my-form")
 let bookShelf = document.getElementById("my-book-shelf")
 let myBookSummary = document.getElementById("my-book-summary")
-
+let delBookBtn = document.getElementById("delete-book-btn")
+let bookDetailBtns = document.getElementById("the-book-details-btns")
 
 let url = "http://localhost:8080/api/v1/book/getAllBooks"
-console.log("Hello")
 fetch(url)
     .then((res)=>{
         return res.json();
@@ -28,7 +28,8 @@ fetch(url)
            cardAuthor.innerText = x.bookAuthor;
            cardLocation.innerText = x.bookLocation;
            newDiv.classList.add("book-item");
-           cardImg.classList.add("book-item-cover")
+           cardImg.classList.add("book-item-cover");
+
 
            newDiv.appendChild(cardImg);
            newDiv.appendChild(cardTitle);
@@ -40,10 +41,28 @@ fetch(url)
                bookAuthor.innerText = x.bookAuthor;
                bookCoverLink.src = x.bookCoverLink;
                myBookSummary.innerText = x.bookSummary
+               delBookBtn.id = x.id;
            })
 
            bookShelf.appendChild(newDiv)
 
+
+            delBookBtn.addEventListener("click",async () => {
+                console.log("Hello World, Book Removed!")
+                console.log(delBookBtn.id)
+                // method, headers and content-type
+                const response = await fetch(`http://localhost:8080/api/v1/book/deleteBook/${delBookBtn.id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                });
+
+                const resData = 'resource deleted...';
+
+                return resData;
+
+            })
 
         })
     })
@@ -81,3 +100,4 @@ function helloWorld(){
 
     // id +=1;
 }
+
