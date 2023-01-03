@@ -60,7 +60,8 @@ fetch(url)
 
                 const resData = 'resource deleted...';
 
-                return resData;
+                location.reload();
+
 
             })
 

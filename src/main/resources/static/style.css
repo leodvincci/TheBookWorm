@@ -177,10 +177,9 @@ header{
 
 }
 
-.book-summary #my-book-summary  {
+#my-book-summary  {
     overflow: scroll;
-    height: 35%;
-    padding: 2em;
+    height: 10em;
     margin: 1rem;
     color: #4d524a;
     font-size: 1rem;
