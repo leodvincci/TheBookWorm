@@ -11,7 +11,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service @RequiredArgsConstructor @Transactional @Slf4j
+@Service
+@RequiredArgsConstructor
+@Transactional
+@Slf4j
 public class UserServiceImpl implements UserService{
     private final UserRepo userRepo;
     private final RoleRepo roleRepo;
@@ -47,7 +50,6 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<UserEntity> getUsers() {
         log.info("Fetching all users");
-
         return userRepo.findAll();
     }
 }
