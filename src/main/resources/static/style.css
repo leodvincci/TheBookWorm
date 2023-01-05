@@ -82,6 +82,29 @@ body{
     background: #4ea699;
 }
 
+.add-bookstack{
+    font-size: .75rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+    color: whitesmoke;
+    font-weight: 900;
+    text-decoration: none;
+    width: 50%;
+    height:3rem;
+    background:#539441;
+}
+
+.create-bookworm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: whitesmoke;
+    width: 60%;
+}
+
 input{
     font-family: 'Montserrat';
 
@@ -118,7 +141,7 @@ textarea{
 
 
 
-#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover, .delete-book:hover,#edit-book:hover, #share-book:hover{
+#btn-add-book:hover, #add-new-book:hover, #checkout-book:hover,.add-bookstack:hover, .delete-book:hover,#edit-book:hover, #share-book:hover{
     cursor: pointer;
     background: #212121;
     color: forestgreen;
@@ -131,7 +154,6 @@ textarea{
     justify-content: center;
     background: whitesmoke;
     width: 60%;
-
 }
 
 header{
