@@ -1,6 +1,6 @@
 let bookTitle = document.getElementById("book-title")
 let bookAuthor = document.getElementById("book-author")
-let bookCoverLink = document.getElementById("book-img")
+let bookCoverLink = document.getElementById("book-cover-link")
 let bookSummary = document.getElementById("book-summary")
 let bookLocation = document.getElementById("book-location")
 // let id = 0;
@@ -22,6 +22,7 @@ fetch(url)
            let cardLocation = document.createElement("h6");
            let cardImg = document.createElement("img");
            let newDiv = document.createElement("div");
+           let bookCoverLink = document.getElementById("book-img")
 
            cardImg.src=x.bookCoverLink;
            cardTitle.innerText = x.bookTitle
@@ -94,6 +95,8 @@ function helloWorld(){
         .then((response) => response)
         .then((data) => {
             console.log('Success:', data);
+            location.reload();
+
         })
         .catch((error) => {
             console.error('Error:', error);
