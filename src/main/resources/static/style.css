@@ -259,6 +259,25 @@ header{
     width: 90%;
 }
 
+.bookWorm-post{
+    font-family: "Montserrat SemiBold";
+    margin: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: 5%;
+    /*border: 1px crimson solid;*/
+}
+
+.bookWorm-post:hover{
+    cursor: pointer;
+    background: rgba(255, 235, 200, 0.5);
+}
+
+.bookWorm-post h4{
+    padding-right: 1rem;
+    color: #7e7e7e;
+}
+
 
 #book-img{
     width: 70%;
